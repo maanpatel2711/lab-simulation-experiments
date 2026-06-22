@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Laboratory Simulation</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div id="container"></div>
+    
+    <div id="ui-container">
+        <div id="hud">
+            <div class="hud-panel">
+                <h3>Laboratory Controls</h3>
+                <p><strong>Mouse:</strong> Look Around</p>
+                <p><strong>W/A/S/D:</strong> Move</p>
+                <p><strong>Space:</strong> Jump</p>
+                <p><strong>E:</strong> Interact</p>
+            </div>
+            <div class="status-panel">
+                <h3>Status</h3>
+                <p>Character: <span id="char-status">Ready</span></p>
+                <p>Health: <span id="health">100</span>%</p>
+            </div>
+            <div class="task-panel">
+                <h3>Current Task</h3>
+                <p id="task-description">Explore the laboratory</p>
+                <div id="task-progress" class="progress-bar">
+                    <div id="task-progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+            <div id="interaction-prompt" class="interaction-prompt hidden">
+                <p id="interaction-text">Press E to interact</p>
+            </div>
+        </div>
+        <div id="experiment-log">
+            <h3>Experiment Log</h3>
+            <div id="log-content"></div>
+        </div>
+    </div>
+
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading Laboratory...</p>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
